@@ -1,0 +1,118 @@
+{
+  "entities": {
+    "users": {
+      "title": "User",
+      "description": "User profiles for customers, shop admins, and super admins",
+      "fields": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "avatar": { "type": "string" },
+        "rewardPoints": { "type": "number" },
+        "role": { "type": "string" },
+        "shopId": { "type": "string" },
+        "shopName": { "type": "string" }
+      }
+    },
+    "shopOwners": {
+      "title": "Shop Owner",
+      "description": "Self-registered shop owners and local franchise requests",
+      "fields": {
+        "shopId": { "type": "string" },
+        "uid": { "type": "string" },
+        "shopName": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "deliveryRadius": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "lastLogin": { "type": "string" }
+      }
+    },
+    "shops": {
+      "title": "Shop",
+      "description": "Approved operational shops and franchises",
+      "fields": {
+        "id": { "type": "string" },
+        "shopName": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "uid": { "type": "string" },
+        "address": { "type": "string" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "deliveryRadius": { "type": "number" }
+      }
+    },
+    "orders": {
+      "title": "Order",
+      "description": "Customer purchase orders",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "date": { "type": "string" },
+        "totalAmount": { "type": "number" },
+        "status": { "type": "string" },
+        "deliverySlot": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "shopId": { "type": "string" },
+        "shopName": { "type": "string" },
+        "shopUid": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    },
+    "subscriptions": {
+      "title": "Subscription",
+      "description": "Recurring daily/weekly milk and dairy subscriptions",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "productId": { "type": "string" },
+        "status": { "type": "string" },
+        "pausedUntil": { "type": "string" },
+        "deliveryAddressId": { "type": "string" },
+        "shopId": { "type": "string" },
+        "shopName": { "type": "string" },
+        "shopUid": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "nextDeliveryDate": { "type": "string" }
+      }
+    },
+    "addresses": {
+      "title": "Address",
+      "description": "Customer delivery addresses",
+      "fields": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "phone": { "type": "string" },
+        "flatNo": { "type": "string" },
+        "area": { "type": "string" },
+        "landmark": { "type": "string" },
+        "city": { "type": "string" },
+        "pincode": { "type": "string" },
+        "isDefault": { "type": "boolean" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" }
+      }
+    },
+    "admins": {
+      "title": "Admin",
+      "description": "Super admin designations and permissions",
+      "fields": {
+        "email": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    }
+  }
+}
